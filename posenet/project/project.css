@@ -1,0 +1,194 @@
+/*
+ *  The following loading spinner CSS is from SpinKit project
+ *  https://github.com/tobiasahlin/SpinKit
+ */
+.sk-spinner-pulse {
+	width: 20px;
+	height: 20px;
+	margin: auto 10px;
+	float: left;
+	background-color: #333;
+	border-radius: 100%;
+	-webkit-animation: sk-pulseScaleOut 1s infinite ease-in-out;
+	animation: sk-pulseScaleOut 1s infinite ease-in-out;
+}
+@-webkit-keyframes sk-pulseScaleOut {
+	0% {
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+
+	100% {
+		-webkit-transform: scale(1.0);
+		transform: scale(1.0);
+		opacity: 0;
+	}
+}
+@keyframes sk-pulseScaleOut {
+	0% {
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+
+	100% {
+		-webkit-transform: scale(1.0);
+		transform: scale(1.0);
+		opacity: 0;
+	}
+}
+.spinner-text {
+	float: left;
+}
+
+
+/* general css */
+body{
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+
+/* video output and posenet-related css */
+#loading{
+	display: flex;
+}
+#main, #video{
+	display: none;
+}
+#output{
+	margin: 0 auto; 
+	display: block; 
+	text-align: center;
+}
+.dg{
+	display: none;
+}
+
+
+/* message header css */
+#header{
+	z-index: 1;
+}
+#message{
+	background-color: #32a8547e;
+	text-align: center;
+	padding-top: 30px;
+}
+
+
+/* start screen */
+.centerStartGame{
+	display: block; 
+	background: url("minecraft_river_side.jpg") no-repeat;
+	background-size: 100%;
+	position: relative;
+	top: -30px;
+	width: 443px; 
+	height: 575px;
+	text-align: center;
+	line-height: 75px;
+	color: #fff;
+	-webkit-box-shadow: 2px 2px 5px #000;
+	-moz-bot-shadow: 2px 2px 5px #000;
+}
+h1{
+	font-size: 1.5em;
+	background-color: #698fe050;
+	margin: 0px;
+}
+h2{
+	font-size: 1.1em;
+	margin: 0px;
+	font-weight: normal;
+}
+#inst{
+	padding: 45px 35px 35px 35px;
+	width: 100%;
+	table-layout: fixed;
+}
+#inst tr{
+	width: 100%;
+}
+#inst td{
+	width: 40%;
+	margin: 5%;
+}
+#inst img{
+	display: block;
+	width: 75%;
+	height: auto;
+	margin: 0 auto;
+}
+#desc{
+	line-height: 30px;
+	font-size: 18px;
+}
+#instructions{
+	line-height: 25px;
+	font-size: 20px;
+	padding: 0 20px;
+}
+
+
+/* end screen */
+.centerEndGame{
+	display: none;
+	background-color: black;
+	border: 5px solid white;
+	margin: 150px auto;
+	position: absolute;
+	top: 0; 
+	left: 0; 
+	bottom: 0; 
+	right: 0;
+	width: 285px;
+	height: 200px;
+	font-size: 20px;
+	text-align: center;
+	line-height: 50px;
+	color: white;
+	-webkit-box-shadow: 2px 2px 5px #000;
+	-moz-bot-shadow: 2px 2px 5px #000;
+}
+
+
+/* game canvas */
+canvas{
+	display: none;
+	margin: 0 auto;
+}
+
+
+/* Split the screen in half */
+.split{
+	height: 100%;
+	width: 50%;
+	position: fixed;
+	z-index: 1;
+	overflow-x: hidden;
+}
+/* Defining left side */
+.left{
+	left: 0;
+	background-color: #32a8547e;
+}
+/* defining right side */
+.right{
+	right: 0;
+	background-color: #32a8547e;
+}
+/* To center content on either side */
+.centered{
+	position: absolute;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+#videoArea{
+	top: 45%;
+	left: 60%;
+}
+#gameArea{
+	top: 50%;
+	left: 40%;
+}

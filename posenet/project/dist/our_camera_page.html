@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="/project.b89ad924.css" type="text/css" rel="stylesheet">
+        <title>PoseNet - Camera Feed Demo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+        <div id="loading">
+            <div class="spinner-text">
+                Loading PoseNet model...
+            </div>
+            <div class="sk-spinner sk-spinner-pulse"></div>
+        </div>
+
+        <div id="header">
+            <h1 id="message"></h1>
+        </div>
+
+        <div class="split left">
+            <div id="videoArea" class="centered">
+                <div id="main">
+                    <video id="video" playsinline=""></video>
+                    <canvas id="output"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="split right">
+            <div id="gameArea" class="centered">
+                <!-- start screen -->
+                <div id="startGame" class="centerStartGame">
+                    <h2>Blank's</h2>
+                    <h1>TENSORDODGE</h1>
+                    <table id="inst">
+                        <tr>
+                            <td>
+                                <img src="/diamondImage.bba42025.png" alt="diamond">
+                            </td>
+                            <td>
+                                <img src="/anvilImage.9bce50fe.png" alt="anvil">
+                            </td>
+                        </tr>
+                        <tr id="desc">
+                            <td>
+                                Diamond
+                            </td>
+                            <td>
+                                Anvil
+                            </td>
+                        </tr>
+                    </table>
+                    <p id="instructions">Move left and right to avoid the anvils and jump to get the diamonds!</p>
+                </div>
+
+                <!-- ending screen -->
+                <div id="endGame" class="centerEndGame"></div>
+
+                <!-- game canvas -->
+                <canvas id="canvas"></canvas>        
+            </div>
+        </div>
+
+        <script>var stack_actions = [];
+var stack_jumps = [];
+var average_y_calibrated = 0; //The average of the max y of the bounding box during calibration
+
+var person_detected = false; //When this is true, the game will start
+
+var calibrated = false;
+var game_started = false;</script>
+        <script src="/our_camera.544fda8b.js"></script>
+        <script type="text/javascript" src="/project.b5dfbff8.js"></script>
+
+    </body>
+</html>
